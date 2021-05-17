@@ -6,7 +6,7 @@ const Login = () => {
   const facebookLogin = () => {
     alert('fB'); 
 
-      window.fbAsyncInit = function() {
+  window.fbAsyncInit = function() {
     FB.init({
       appId      : '850025339250150',
       xfbml      : true,
@@ -31,6 +31,15 @@ const Login = () => {
       window.FB.login( function(response){ if( response.status === "connected"){ console.log( response ); } }, {scope :'public_profile'} ); 
   };
 
+  const googleLogin = () => {
+     
+      var s = document.createElement( 'script' );
+      s.setAttribute( 'src', "https://apis.google.com/js/api.js" );
+      s.onload= function() { };
+      document.body.appendChild( s );
+      alert("cargado"); 
+  }; 
+
   return ( 
     <>
 
@@ -43,8 +52,10 @@ const Login = () => {
    			<button class="btn">Entrar</button> 
    			</div> 
    	 	<hr/> 
-   	 	<div>  <button onClick={facebookLogin} class="btn-login btn-fb btn-primary">FACEBOOK</button>  
-             <button onClick={facebookStart} class="btn-login btn-g btn-primary">GOOGLE</button>  
+   	 	<div>  
+         <button onClick={facebookLogin} class="btn-login btn-fb btn-primary">CARGAR FB</button>  
+         <button onClick={facebookStart} class="btn-login btn-g btn-primary">INICIAR FB</button> 
+         <button onClick={googleLogin} class="btn-primary">CARGAR G</button> 
       </div> 
    	 </div> 
    	 </div> 
