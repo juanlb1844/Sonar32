@@ -44,6 +44,11 @@ const Login = () => {
   const googleStart = () => {
      var GoogleAuth;
   var SCOPE = 'https://www.googleapis.com/auth/drive.metadata.readonly';
+
+  handleClientLoad(); 
+
+  GoogleAuth.signIn(); 
+  
   function handleClientLoad() {
     // Load the API's client and auth2 modules.
     // Call the initClient function after the modules load.
