@@ -8,6 +8,7 @@ import '../styles/components/Layout.css';
 
 const Layout = ({children}) => (
     <div className="main">
+
         <Header />
         {children}
         <Footer />

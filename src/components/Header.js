@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 // Importar estilos del Header
 import '../styles/components/Header.css';
 
+import '../styles/components/Styles.css';
+
 const Header = () => (
   <div className="header">
     <h1 className="header-title">
@@ -11,7 +13,7 @@ const Header = () => (
     </h1>
     <nav>
       <ul>
-        <li>
+        <li> 
           <Link to="/users">Usuarios</Link>
         </li>
         <li>
@@ -19,6 +21,12 @@ const Header = () => (
         </li>
         <li>
           <Link to="/companies">Empresas</Link>
+        </li>
+        <li>
+          <Link to="/login">Entrar</Link>
+        </li>
+        <li>
+          <Link to="/politica-de-privacidad">Politica</Link>
         </li>
       </ul>
     </nav>

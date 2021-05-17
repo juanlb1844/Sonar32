@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 const httpHelper =  axios.create({
-    baseUrl: "https://www.sonar32.com.mx",
+    baseUrl: "https://react.at-cabo.com/",
     headers: {
         "Content-Type": "application/json"
     }
 });
 
-export default httpHelper;
+export default httpHelper;  
