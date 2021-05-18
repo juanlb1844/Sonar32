@@ -84,9 +84,14 @@ const Login = () => {
       // Call handleAuthClick function when user clicks on
       //      "Sign In/Authorize" button.
       
-      /*$('#sign-in-or-out-button').click(function() {
-        handleAuthClick();
-      });
+       
+       
+      
+
+      var el = document.getElementById("sign-in-or-out-button");
+      el.addEventListener("click",  handleAuthClick, false);
+ 
+      /*
       
       $('#revoke-access-button').click(function() {
         revokeAccess();
@@ -142,6 +147,7 @@ const Login = () => {
          <button onClick={facebookStart} class="btn-login btn-g btn-primary">INICIAR FB</button> 
          <button onClick={googleLogin} class="btn-primary">CARGAR G</button> 
          <button onClick={googleStart} class="btn-primary">CARGAR S</button>
+         <button id="sign-in-or-out-button">Entrar</button> 
       </div> 
    	 </div> 
    	 </div> 
