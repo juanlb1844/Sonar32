@@ -83,12 +83,15 @@ const Login = () => {
 
       // Call handleAuthClick function when user clicks on
       //      "Sign In/Authorize" button.
-      $('#sign-in-or-out-button').click(function() {
+      
+      /*$('#sign-in-or-out-button').click(function() {
         handleAuthClick();
       });
+      
       $('#revoke-access-button').click(function() {
         revokeAccess();
-      });
+      }); */ 
+
     });
   }
 
