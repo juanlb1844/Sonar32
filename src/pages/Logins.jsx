@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 const Login = () => { 
   
   const facebookLogin = () => {
-    alert('fB'); 
+  alert('fB'); 
 
   window.fbAsyncInit = function() {
     FB.init({
@@ -41,18 +41,19 @@ const Login = () => {
   }; 
 
 
+  const basicLogin = () => {
+    alert("usuario y contraseña incorrectos"); 
+  }; 
+
   const googleStart = () => {
      var GoogleAuth;
-  var SCOPE = 'https://www.googleapis.com/auth/drive.metadata.readonly';
-
-  handleClientLoad(); 
-
-  GoogleAuth.signIn(); 
-  
+     var SCOPE = 'https://www.googleapis.com/auth/drive.metadata.readonly';
+ 
   function handleClientLoad() {
     // Load the API's client and auth2 modules.
     // Call the initClient function after the modules load.
     gapi.load('client:auth2', initClient);
+    console.log( gapi ); 
   }
 
   function initClient() {
@@ -104,6 +105,13 @@ const Login = () => {
   function updateSigninStatus() {
     setSigninStatus();
   }
+
+
+   console.log("----------"); 
+   handleClientLoad(); 
+
+   GoogleAuth.signIn(); 
+
   }; 
 
   return ( 
@@ -115,7 +123,7 @@ const Login = () => {
    			<input class="input-login" placeholder="usuario"></input>
    			<input class="input-login" placeholder="contraseña" type="password"></input>
    			<div class="content-footer-login"> 
-   			<button class="btn">Entrar</button> 
+   			<button  onClick={basicLogin} class="btn">Entrar</button> 
    			</div> 
    	 	<hr/> 
    	 	<div>  
