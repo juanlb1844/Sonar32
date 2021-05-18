@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
- 
+
+  
 const Login = () => { 
   
   const facebookLogin = () => {
@@ -35,9 +36,9 @@ const Login = () => {
      
       var s = document.createElement( 'script' );
       s.setAttribute( 'src', "https://apis.google.com/js/api.js" );
-      s.onload= function() { };
+      s.onload =  googleStart;  
       document.body.appendChild( s );
-      alert("cargado"); 
+      //alert("cargado"); 
   }; 
 
 
@@ -130,24 +131,28 @@ const Login = () => {
    
   }; 
 
+  const fun = {
+    "ss" : function() { return 20; }
+  };
+
+  googleLogin();  
+
   return ( 
     <>
-
+    <script src="https://connect.facebook.net/en_US/sdk.js"/> 
     <div class="container-login">
     <div class="content-login"> 
-    <h1>LOGIN..</h1> 
+    <h1>LOGIN.. {fun.ss()}</h1> 
    			<input class="input-login" placeholder="usuario"></input>
    			<input class="input-login" placeholder="contraseña" type="password"></input>
    			<div class="content-footer-login"> 
    			<button  onClick={basicLogin} class="btn">Entrar</button> 
-   			</div> 
+   			</div>  
    	 	<hr/> 
    	 	<div>  
          <button onClick={facebookLogin} class="btn-login btn-fb btn-primary">CARGAR FB</button>  
          <button onClick={facebookStart} class="btn-login btn-g btn-primary">INICIAR FB</button> 
-         <button onClick={googleLogin} class="btn-primary">CARGAR G</button> 
-         <button onClick={googleStart} class="btn-primary">CARGAR S</button>
-         <button id="sign-in-or-out-button">Entrar</button> 
+         <button id="sign-in-or-out-button">Entrar</button>  
       </div> 
    	 </div> 
    	 </div> 
