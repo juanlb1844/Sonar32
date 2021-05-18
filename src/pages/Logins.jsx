@@ -49,7 +49,7 @@ const Login = () => {
      var GoogleAuth;
      var SCOPE = 'https://www.googleapis.com/auth/drive.metadata.readonly';
  
- 
+  alert('..'); 
    console.log("----------"); 
    
   }; 
@@ -71,7 +71,6 @@ const Login = () => {
          <button onClick={facebookStart} class="btn-login btn-g btn-primary">INICIAR FB</button> 
          <button onClick={googleLogin} class="btn-primary">CARGAR G</button> 
          <button onClick={googleStart} class="btn-primary">CARGAR S</button>
-
       </div> 
    	 </div> 
    	 </div> 
