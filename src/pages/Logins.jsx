@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 const Login = () => { 
   
   const facebookLogin = () => {
-  alert('fB'); 
+  console.log("FB iniciado"); 
 
   window.fbAsyncInit = function() {
     FB.init({
@@ -28,7 +28,7 @@ const Login = () => {
   }; 
 
   const facebookStart = () => { 
-      alert("DIALOG")    
+      console.log("diálogo de inicio FB"); 
       window.FB.login( function(response){ if( response.status === "connected"){ console.log( response ); } }, {scope :'public_profile'} ); 
   };
 
@@ -50,7 +50,6 @@ const Login = () => {
      var GoogleAuth;
      var SCOPE = 'https://www.googleapis.com/auth/drive.metadata.readonly';
  
-     alert('..'); 
      console.log("----------"); 
      handleClientLoad(); 
     function handleClientLoad() {
@@ -136,6 +135,8 @@ const Login = () => {
   };
 
   googleLogin();  
+  
+  facebookLogin(); 
 
   return ( 
     <>
@@ -150,9 +151,8 @@ const Login = () => {
    			</div>  
    	 	<hr/> 
    	 	<div>  
-         <button onClick={facebookLogin} class="btn-login btn-fb btn-primary">CARGAR FB</button>  
          <button onClick={facebookStart} class="btn-login btn-g btn-primary">INICIAR FB</button> 
-         <button id="sign-in-or-out-button">Entrar</button>  
+         <button id="sign-in-or-out-button" class="btn-login btn-g btn-primary">Entrar</button>  
       </div> 
    	 </div> 
    	 </div> 
